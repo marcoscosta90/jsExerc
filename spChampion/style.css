@@ -5,16 +5,18 @@
 body{
     background-image: url('saopaulo.jpg');
     background-size: cover;
-    background-position: center center;
+    
     width: 100vh;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     font-family: sans-serif;
     margin: 0;
 }
+
+
 
 h1 {
     font-weight: 1000;
@@ -22,12 +24,12 @@ h1 {
     font-size:  4.1rem;
     margin-top: 5rem;
 }
-.sp {
-    text-align: center;
-}
+
 
 .countdown-container {
     display: flex;
+    
+   
 }
 
 .big-text {
@@ -35,10 +37,12 @@ h1 {
     font-size:  6rem;
     line-height: 1;
     margin: 0 2rem;
+    
 }
 
 .countdown-el {
-    text-align: center;
+    text-align:center;
+    
 }
 
 .countdown-el span {
