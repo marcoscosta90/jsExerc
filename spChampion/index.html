@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="/script.js"></script>
+   
 </head>
 <body>
+    
     <h1>São Paulo Campeão</h1>
+    
     <div class="countdown-container">
-
         <div class="countdown-el days-c">
         <p class="big-text" id="days">0</p>
         <span>Dias</span>
@@ -29,10 +30,7 @@
         <div class="countdown-el seconds-c">
         <p class="big-text" id="seconds">0</p>
         <span>Segundos</span>
-        </div>
-
-
-        
+        </div>        
     </div>  
     <script>
 
@@ -57,12 +55,14 @@ function countdown(){
     const seconds = Math.floor(totalSeconds) % 60;
 
     daysEl.innerHTML = days;
-    hoursEl.innerHTML = hours;
-    minsEl.innerHTML = mins;
-    secondsEl.innerHTML = seconds;
+    hoursEl.innerHTML = formatData(hours);
+    minsEl.innerHTML = formatData(mins);
+    secondsEl.innerHTML = formatData(seconds);
 }
 
-
+function formatData(time){
+    return time < 10 ? `0${time}` : time;
+}
 
 countdown();
 setInterval(countdown, 1000);
